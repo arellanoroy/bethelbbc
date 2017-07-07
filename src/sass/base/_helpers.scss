@@ -1,0 +1,82 @@
+//---------------------------------------------------------//
+// HELPERS
+//---------------------------------------------------------// 
+// - Custom 
+//---------------------------------------------------------//
+
+// Vertical Alignment
+
+.valign {
+	width: 100%;
+	display: table;
+	&.bottom {
+		.valign-content {
+			vertical-align: bottom;
+		}
+	}
+	.valign-content {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+
+// Center Block
+
+.center-block {
+	float: none;
+	margin: 0 auto;
+}
+
+
+// Hide only visually, but have it available for screen readers:
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+// Extends the .visuallyhidden class to allow the element
+// to be focusable when navigated to via the keyboard:
+
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+
+
+// Browserupgrade
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+// Margins
+
+.margin-left {
+    margin-left: rem(20);
+}
+.margin-right {
+    margin-right: rem(20);
+}

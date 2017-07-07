@@ -1,0 +1,170 @@
+//---------------------------------------------------------//
+// TYPOGRAPHY
+//---------------------------------------------------------// 
+// - All types of typography
+// - Font-face
+// - Headings
+// - Paragraphs
+//---------------------------------------------------------//
+
+
+
+@font-face {
+	font-family: 'AvenirNext';
+	src: url('#{$font-url}/avenirnextltproit.eot');
+	src: url('#{$font-url}/avenirnextltproit.eot?#iefix') format('embedded-opentype'),
+		url('#{$font-url}/avenirnextltproit.svg#avenirnextltproit') format('svg'),
+		url('#{$font-url}/avenirnextltproit.ttf') format('truetype'),
+		url('#{$font-url}/avenirnextltproit.woff') format('woff'),
+		url('#{$font-url}/avenirnextltproit.woff2') format('woff2');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'AvenirNext';
+	src: url('#{$font-url}/avenirnextltprobold.eot');
+	src: url('#{$font-url}/avenirnextltprobold.eot?#iefix') format('embedded-opentype'),
+		url('#{$font-url}/avenirnextltprobold.svg#avenirnextltprobold') format('svg'),
+		url('#{$font-url}/avenirnextltprobold.ttf') format('truetype'),
+		url('#{$font-url}/avenirnextltprobold.woff') format('woff'),
+		url('#{$font-url}/avenirnextltprobold.woff2') format('woff2');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'AvenirNext';
+	src: url('#{$font-url}/avenirnextltproregular.eot');
+	src: url('#{$font-url}/avenirnextltproregular.eot?#iefix') format('embedded-opentype'),
+		url('#{$font-url}/avenirnextltproregular.svg#avenirnextltproregular') format('svg'),
+		url('#{$font-url}/avenirnextltproregular.ttf') format('truetype'),
+		url('#{$font-url}/avenirnextltproregular.woff') format('woff'),
+		url('#{$font-url}/avenirnextltproregular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'AvenirNext';
+	src: url('#{$font-url}/avenirnextltproboldit.eot');
+	src: url('#{$font-url}/avenirnextltproboldit.eot?#iefix') format('embedded-opentype'),
+		url('#{$font-url}/avenirnextltproboldit.svg#avenirnextltproboldit') format('svg'),
+		url('#{$font-url}/avenirnextltproboldit.ttf') format('truetype'),
+		url('#{$font-url}/avenirnextltproboldit.woff') format('woff'),
+		url('#{$font-url}/avenirnextltproboldit.woff2') format('woff2');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'AvenirNext';
+	src: url('#{$font-url}/avenirnextltpromedium.eot');
+	src: url('#{$font-url}/avenirnextltpromedium.eot?#iefix') format('embedded-opentype'),
+		url('#{$font-url}/avenirnextltpromedium.svg#avenirnextltpromedium') format('svg'),
+		url('#{$font-url}/avenirnextltpromedium.ttf') format('truetype'),
+		url('#{$font-url}/avenirnextltpromedium.woff') format('woff'),
+		url('#{$font-url}/avenirnextltpromedium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'AvenirNext';
+	src: url('#{$font-url}/avenirnextltprodemi.eot');
+	src: url('#{$font-url}/avenirnextltprodemi.eot?#iefix') format('embedded-opentype'),
+		url('#{$font-url}/avenirnextltprodemi.svg#avenirnextltprodemi') format('svg'),
+		url('#{$font-url}/avenirnextltprodemi.ttf') format('truetype'),
+		url('#{$font-url}/avenirnextltprodemi.woff') format('woff'),
+		url('#{$font-url}/avenirnextltprodemi.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Baskerville';
+	src: url('#{$font-url}/baskerville.eot');
+	src: url('#{$font-url}/baskerville.eot?#iefix') format('embedded-opentype'),
+		url('#{$font-url}/baskerville.svg#baskerville') format('svg'),
+		url('#{$font-url}/baskerville.ttf') format('truetype'),
+		url('#{$font-url}/baskerville.woff') format('woff'),
+		url('#{$font-url}/baskerville.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Baskerville';
+	src: url('#{$font-url}/baskervilleitalic.eot');
+	src: url('#{$font-url}/baskervilleitalic.eot?#iefix') format('embedded-opentype'),
+		url('#{$font-url}/baskervilleitalic.svg#baskervilleitalic') format('svg'),
+		url('#{$font-url}/baskervilleitalic.ttf') format('truetype'),
+		url('#{$font-url}/baskervilleitalic.woff') format('woff'),
+		url('#{$font-url}/baskervilleitalic.woff2') format('woff2');
+	font-weight: normal;
+	font-style: italic;
+}
+
+
+
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, .h1, .h2, .h3, .h4, .h5, .h6 {
+	margin-top: 0;
+}
+
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, .h1, .h2, .h3, .h4, .h5, .h6 {
+	margin-bottom: $globalMarginBottom;
+}
+
+
+h1, .h1 {
+	font-size: 36px;
+}
+
+h2, .h2 {
+	font-size: 30px;
+}
+
+h3, .h3 {
+	font-size: 24px;
+}
+
+h4, .h4 {
+	font-size: 20px;
+}
+
+h5, .h5 {
+	font-size: 16px;
+}
+
+
+.font-serif {
+	font-family: $font-family-serif;
+}
+
+.inline-list {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 -15px 0;
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 15px;
+		
+	}
+	@include breakpoint(md) {
+		text-align: left;
+		margin-left: 0;
+		margin-right: 24px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

@@ -1,0 +1,250 @@
+//---------------------------------------------------------//
+// Main
+//---------------------------------------------------------// 
+
+
+
+
+// Blocks
+
+.block-wrapper {
+	
+}
+
+.block {
+	position: relative;
+	overflow: hidden;
+	background-color: #f2f2f2;
+}
+.block-content {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	@include breakpoint(sm) {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+	@include breakpoint(md) {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+}
+
+
+
+// Slide Transition
+
+.slide-image {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+html.fp-enabled,
+.fp-enabled body {
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+
+    /*Avoid flicker on slides transitions for mobile phones #336 */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+.slide-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: table;
+	z-index: 2;
+	color: #ffffff;
+	text-align: center;
+	padding-top: 0;
+	&.text-center {
+		text-align: center;
+	}
+	h1, h2, h3, h4, h5, h6, p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.slide-content-inner {
+		display: table-cell;
+		vertical-align: middle;
+		padding-top: 6%;
+	}
+	.title {
+		font-size: 28px;
+		letter-spacing: 2px;
+		line-height: 1.3;
+	}
+	.sub-title {
+		font-size: 22px;
+		font-family: $font-family-serif;
+		font-style: italic;
+		line-height: $line-height-base;
+	}
+	@include breakpoint(sm) {
+		.title {
+			font-size: 46px;
+		}
+		.sub-title {
+			font-size: 24px;
+		}
+	}
+	@include breakpoint(md) {
+		text-align: center;
+		padding: 0;
+		.title {
+			font-size: 64px;
+		}
+	}
+}
+
+.down-arrow {
+	background: url('#{$img-url}/down-arrow.svg') 0 0 no-repeat;
+	@include background-retina(47, 24);
+	position: fixed;
+	bottom: 30px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	z-index: 1009;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	@include breakpoint(sm) {
+		display: none;
+	}
+}
+
+
+.sched-list {
+	font-size: 24px;
+	@extend .nav;
+	font-family: $font-family-serif;
+	font-style: italic;
+	font-weight: normal;
+	margin-bottom: $globalMarginBottom;
+	li {
+		display: block;
+	}
+}
+
+
+.slide-nav {
+	@extend .nav;
+	position: fixed;
+	z-index: 1009;
+	top: 50%;
+	left: 30px;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	display: none;
+	li {
+		display: block;
+		margin-bottom: 8px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	a {
+		display: block;
+		width: 12px;
+		height: 12px;
+		border: 2px solid #ffffff;
+		border-radius: 50%;
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		cursor: pointer;
+	}
+	li.active a, a:hover {
+		background-color: #5aa6d6;
+	}
+	@include breakpoint(md) {
+		display: block;
+	}
+}
+
+
+
+
+// List Content
+
+.list-content {
+	@extend .nav;
+	margin-left: -20px;
+	margin-right: -20px;
+	@include clearfix();
+	margin-bottom: -40px;
+	overflow: hidden;
+	text-align: center;
+	li {
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-bottom: 40px;
+	}
+	@include breakpoint(sm) {
+		margin-left: -30px;
+		margin-right: -30px;
+		text-align: left;
+		li {
+			width: 50%;
+			float: left;
+			padding-left: 30px;
+			padding-right: 30px;
+			&:nth-child(2n+1) {
+				clear: both;
+			}
+		}
+	}
+}
+
+
+
+// Featured Testimonial
+
+.featured-testimonial {
+	height: 480px;
+	h2 {
+		font-size: 36px;
+		font-family: $font-family-serif;
+		font-style: italic;
+	}
+	@include breakpoint(sm) {
+		h2 {
+			font-size: 48px;
+		}
+	}
+}
+
+
+
+
+// Scroll Animation
+
+.scroll-anim {
+	opacity: 0;
+    visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: translateY(0px) translateZ(0) translate3d(0,0,0);
+    -moz-transform: translateY(0px) translateZ(0) translate3d(0,0,0);
+    -ms-transform: translateY(0px) translateZ(0) translate3d(0,0,0);
+    -o-transform: translateY(0px) translateZ(0) translate3d(0,0,0);
+    transform: translateY(0px) translateZ(0) translate3d(0,0,0);
+    -webkit-transition: all 1800ms cubic-bezier(0.23,1,.32,1);
+    -moz-transition: all 1800ms cubic-bezier(0.23,1,.32,1);
+    -o-transition: all 1800ms cubic-bezier(0.23,1,.32,1);
+    transition: all 1800ms cubic-bezier(0.23,1,.32,1);
+}

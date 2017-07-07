@@ -1,0 +1,129 @@
+//---------------------------------------------------------//
+// Buttons
+//---------------------------------------------------------// 
+// - All Buttons
+//---------------------------------------------------------//
+
+
+
+button, a, .btn {
+	@include transition(background-color $easing-speed $easing, border-color $easing-speed $easing, color $easing-speed $easing);
+}
+
+button {
+	background: none;
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+.btn {
+	font-size: 16px;
+	text-transform: uppercase;
+	border-radius: 0;
+	font-weight: bold;
+	letter-spacing: 3px;
+	&:hover, &:focus {
+		text-decoration: none;
+	}
+	&.btn-default {
+		border-color: #ffffff;
+		color: #839d9c;
+		&:hover, &:focus {
+			background-color: #000000;
+			color: #ffffff;
+			border-color: #000000;
+		}
+	}
+	&.btn-border {
+		border: none;
+		text-transform: uppercase;
+		letter-spacing: normal;
+		color: #ffffff;
+		padding-left: 0;
+		padding-right: 0;
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 4px;
+			background-color: #ffffff;
+		}
+	}
+	@include breakpoint(sm) {
+		font-size: 18px;
+		&.btn-border {
+			font-size: 16px;
+		}
+	}
+}
+
+
+
+.btn-anim {
+	overflow: hidden;
+	position: relative;
+	padding: 0;
+	.text-up, .text-down {
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		-webkit-transform-style: preserve-3d;
+    	transform-style: preserve-3d;
+		-webkit-transition: all $easing-speed $easing;
+		transition: all $easing-speed $easing;
+		-webkit-transform: translateZ(0) translate3d(0,0,0);
+		transform: translateZ(0) translate3d(0,0,0);
+		position: relative;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		padding: $padding-base-vertical $padding-base-horizontal;
+		display: block;
+	}
+	.text-down {
+		-webkit-transform: translateZ(0) translate3d(0,25px,0);
+		transform: translateZ(0) translate3d(0,25px,0);
+		opacity: 0;
+		position: absolute;
+	}
+	&.btn-border {
+		&:after {
+			-webkit-transform-style: preserve-3d;
+	    	transform-style: preserve-3d;
+			-webkit-transition: all $easing-speed $easing;
+			transition: all $easing-speed $easing;
+			-webkit-transform: translateZ(0) translate3d(0,0,0);
+			transform: translateZ(0) translate3d(0,0,0);
+		}
+		.text-up, .text-down {
+			padding: $padding-base-vertical 0;
+		}
+	}
+	&:hover, &:focus {
+		.text-up {
+			-webkit-transform: translateZ(0) translate3d(0,-25px,0);
+		   	transform: translateZ(0) translate3d(0,-25px,0);
+		   	opacity: 0;
+		}
+		.text-down {
+			-webkit-transform: translateZ(0) translate3d(0,0,0);
+			transform: translateZ(0) translate3d(0,0,0);
+			opacity: 1;
+		}
+		&.btn-border {
+			.text-down {
+				-webkit-transform: translateZ(0) translate3d(0,-10px,0);
+				transform: translateZ(0) translate3d(0,-10px,0);
+			}
+			&:after {
+				-webkit-transform: translateZ(0) translate3d(0,-4px,0);
+			   	transform: translateZ(0) translate3d(0,-4px,0);
+			   	height: 7px;
+			}
+		}
+	}
+}
+

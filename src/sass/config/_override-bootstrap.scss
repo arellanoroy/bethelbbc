@@ -1,0 +1,52 @@
+//---------------------------------------------------------//
+// Override Boostrap Variables
+//---------------------------------------------------------//
+
+// Colors
+
+$gray-lighter:				#e2e2e2;
+$gray-light:				#bfbfbf;
+$gray-dark:					#4f4c4d;
+
+$body-bg: 					#042643;
+
+
+
+// Typography
+
+
+$font-family-sans-serif:  'AvenirNext', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-serif:       'Baskerville', serif;
+$font-size-base:          16px;
+$line-height-base:        1.5; 
+
+$headings-font-family:    inherit;
+$headings-font-weight:    normal;
+$headings-line-height:    1.2;
+$headings-color:          inherit;
+
+
+
+// Components
+
+$padding-base-vertical:     10px;
+$padding-base-horizontal:   20px;
+
+$padding-large-vertical:    10px;
+$padding-large-horizontal:  16px;
+
+
+
+// Grid
+
+$grid-gutter-width:         30px;
+
+
+// Container Sizes
+
+$container-tablet:             (720px + $grid-gutter-width);
+$container-sm:                 $container-tablet;
+$container-desktop:            (940px + $grid-gutter-width);
+$container-md:                 $container-desktop;
+$container-large-desktop:      (1024px + $grid-gutter-width);
+$container-lg:                 $container-large-desktop;
